@@ -1,71 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Favorite Recipes</title>
-    <link rel="stylesheet" href="styles.css">
+	<title>
+		Image Slider by Ashwin
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet"
+		href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<style>
+		img {
+			width: 100%;
+		}
+
+		.height {
+			height: 10px;
+		}
+
+		/* Image-container design by ashwin*/
+		.image-container {
+			max-width: 800px;
+			position: relative;
+			margin: auto;
+		}
+
+		.next {
+			right: 0;
+		}
+
+		/* Next and previous icon design by ashwin */
+		.previous,
+		.next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			padding: 10px;
+			margin-top: -25px;
+		}
+
+		/* caption decorate by ashwin*/
+		.captionText {
+			color: #000000;
+			font-size: 14px;
+			position: absolute;
+			padding: 12px 12px;
+			bottom: 8px;
+			width: 100%;
+			text-align: center;
+		}
+
+		/* Slider image number by ashwin */
+		.slideNumber {
+			background-color: #5574C5;
+			color: white;
+			border-radius: 25px;
+			right: 0;
+			opacity: .5;
+			margin: 5px;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 24px;
+			position: absolute;
+		}
+
+		.fa {
+			font-size: 32px;
+		}
+
+		.fa:hover {
+			transform: rotate(360deg);
+			transition: 1s;
+			color: white;
+		}
+
+		.footerdot {
+			cursor: pointer;
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbbbbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.5s ease;
+		}
+
+		.active,
+		.footerdot:hover {
+			background-color: black;
+		}
+	</style>
 </head>
+
 <body>
-    <header>
-        <h1>My Favorite Recipes</h1>
-    </header>
+	<center>
+		<h1 style="color:Skyblue">
+			Internship Task 3
+		</h1>
 
-    <section class="recipe">
-        <h2>Misal Pav</h2>
-        <div class="image-container">
-            <img src="misalpaav.jpg" alt="Misal Pav">
-        </div>
-        <h3>Ingredients:</h3>
-        <ul>
-            <li>1 cup sprouted moth beans</li>
-            <li>2 cups mixed sprouts (matki, moth, and black-eyed peas)</li>
-            <li>1 onion, finely chopped</li>
-            <li>2 tomatoes, chopped</li>
-            <li>2-3 green chilies, chopped</li>
-            <li>1/4 cup chopped cilantro (coriander leaves)</li>
-            <li>1/4 cup farsan (sev)</li>
-            <li>2-3 slices of bread, toasted</li>
-        </ul>
+		<b>
+			Image Slider by Ashwin
+		</b>
 
-        <h3>Instructions:</h3>
-        <ol>
-            <li>Heat oil in a pan and add mustard seeds, cumin seeds, and curry leaves.</li>
-            <li>Add chopped onions and sauté until they turn translucent.</li>
-            <li>Add ginger-garlic paste, green chilies, and tomatoes. Cook until the tomatoes soften.</li>
-            <li>Add sprouts, misal masala, and salt. Cook until the sprouts are tender.</li>
-            <li>Serve hot with toasted bread, chopped onions, cilantro, and farsan.</li>
-        </ol>
-    </section>
+		<br><br>
+	</center>
 
-    <section class="recipe">
-        <h2>Pav Bhaji</h2>
-        <div class="image-container">
-            <img src="paavbhaji.jpg" alt="Pav Bhaji">
-        </div>
-        <h3>Ingredients:</h3>
-        <ul>
-            <li>4 potatoes, boiled and mashed</li>
-            <li>2 cups mixed vegetables (peas, carrots, bell peppers), boiled and mashed</li>
-            <li>1 onion, finely chopped</li>
-            <li>2 tomatoes, chopped</li>
-            <li>2 cloves of garlic, minced</li>
-            <li>1-inch piece of ginger, minced</li>
-            <li>2-3 green chilies, chopped</li>
-        </ul>
+	<!-- Image container of the image slider by ashwin -->
+	<div class="image-container">
+		<div class="slide">
+			<div class="slideNumber">1</div>
+			<img src="image1.jpeg"
+"image3.jpeg">
+		</div>
+		<div class="slide">
+			<div class="slideNumber">2</div>
+			<img src="image3.jpeg"
+"image2.jpeg">
+		</div>
+		<div class="slide">
+			<div class="slideNumber">3</div>
+			<img src="image2.jpeg"
+"image2.jpeg">
+		</div>
+		<div class="slide">
+			<div class="slideNumber">4</div>
+			<img src="image4.jpeg"  
+"image2.jpeg">
+		</div>
+		<div class="slide">
+			<div class="slideNumber">5</div>
+			<img src="image5.jpeg"          
+"image1.jpeg">
+		</div>
 
-        <h3>Instructions:</h3>
-        <ol>
-            <li>Heat oil in a pan and add chopped onions. Sauté until they turn golden brown.</li>
-            <li>Add minced garlic, ginger, and green chilies. Sauté for a minute.</li>
-            <li>Add chopped tomatoes and cook until they turn mushy.</li>
-            <li>Add mashed potatoes, mashed vegetables, pav bhaji masala, and salt. Mix well.</li>
-            <li>Simmer for 10-15 minutes, adding water as needed. Mash everything together.</li>
-            <li>Serve hot with buttered pav (buns) and chopped onions.</li>
-        </ol>
-    </section>
+		<!-- Next and Previous icon to change images by ashwin-->
+		<a class="previous" onclick="moveSlides(-1)">
+			<i class="fa fa-chevron-circle-left"></i>
+		</a>
+		<a class="next" onclick="moveSlides(1)">
+			<i class="fa fa-chevron-circle-right"></i>
+		</a>
+	</div>
+	<br>
 
-    <!-- Add more recipe sections as needed -->
+	<div style="text-align:center">
+		<span class="footerdot" onclick="activeSlide(1)">
+		</span>
+		<span class="footerdot" onclick="activeSlide(2)">
+		</span>
+		<span class="footerdot" onclick="activeSlide(3)">
+		</span>
+        <span class="footerdot" onclick="activeSlide(4)">
+		</span>
+        <span class="footerdot" onclick="activeSlide(5)">
+		</span>
+	</div>
 
+	<script>
+		let slideIndex = 1;
+		displaySlide(slideIndex);
+
+		function moveSlides(n) {
+			displaySlide(slideIndex += n);
+		}
+
+		function activeSlide(n) {
+			displaySlide(slideIndex = n);
+		}
+
+		/* Main function */
+		function displaySlide(n) {
+			let i;
+			let totalslides =
+				document.getElementsByClassName("slide");
+
+			let totaldots =
+				document.getElementsByClassName("footerdot");
+
+			if (n > totalslides.length) {
+				slideIndex = 1;
+			}
+			if (n < 1) {
+				slideIndex = totalslides.length;
+			}
+			for (i = 0; i < totalslides.length; i++) {
+				totalslides[i].style.display = "none";
+			}
+			for (i = 0; i < totaldots.length; i++) {
+				totaldots[i].className =
+					totaldots[i].className.replace(" active", "");
+			}
+			totalslides[slideIndex - 1].style.display = "block";
+			totaldots[slideIndex - 1].className += " active";
+		}
+	</script>
 </body>
+
 </html>
